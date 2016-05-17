@@ -1,0 +1,20 @@
+<resources>
+    <string id="language">German</string>
+    <string id="match">Spiel</string>
+    <string id="set">Satz</string>
+    <string id="steps">Schritte</string>
+    <string id="pulse">Puls</string>
+    <string id="newGame">Neues Spiel</string>
+    <string id="newSet">Neuer Satz</string>
+    <string id="pause">Pause</string>
+    <string id="serve">Aufschlag</string>
+    <string id="tieBreak">Tie-Break</string>
+    <string id="quit">Programm Beenden?</string>
+    <string id="time">Zeit</string>
+    <string id="won">gewonnen</string>
+    <string id="history">Historie</string>
+    <string id="save">Aktivität speichern?</string>
+    <string id="reset">Löschen</string>
+    <string id="saveDlg">Speichern</string>
+    <string id="successDlg">Erfolgreich</string>
+</resources>

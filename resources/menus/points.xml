@@ -1,0 +1,5 @@
+<menu id="PreferencesPoints">
+    <menu-item id="points_9">9</menu-item>
+    <menu-item id="points_11">11</menu-item>    
+    <menu-item id="points_15">15</menu-item>
+</menu>

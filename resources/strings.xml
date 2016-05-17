@@ -1,0 +1,20 @@
+<resources>
+    <string id="language">English</string>
+    <string id="match">Match</string>
+    <string id="set">Set</string>
+    <string id="steps">Steps</string>
+    <string id="pulse">Pulse</string>
+    <string id="newGame">New Match</string>
+    <string id="newSet">New Set</string>
+    <string id="pause">Pause</string>
+    <string id="serve">Serve</string>
+    <string id="tieBreak">Tie-Break</string>
+    <string id="quit">Quit Application?</string>
+    <string id="time">Time</string>
+    <string id="won">won</string>
+    <string id="history">History</string>
+    <string id="save">Save Activity?</string>
+    <string id="reset">Reset</string>
+    <string id="saveDlg">Save</string>
+    <string id="successDlg">Complete</string>
+</resources>

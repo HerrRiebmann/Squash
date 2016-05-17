@@ -1,0 +1,6 @@
+<menu id="MainMenu">
+    <menu-item id="item_1">New Match</menu-item>
+    <menu-item id="item_2">New Set</menu-item>
+    <menu-item id="item_3">History</menu-item>
+    <menu-item id="item_4">Preferences</menu-item>
+</menu>

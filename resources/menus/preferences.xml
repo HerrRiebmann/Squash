@@ -1,0 +1,4 @@
+<menu id="PreferencesMenu">
+    <menu-item id="pref_1">Sets (2,3)</menu-item>
+    <menu-item id="pref_2">Points (9,11,15)</menu-item>    
+</menu>

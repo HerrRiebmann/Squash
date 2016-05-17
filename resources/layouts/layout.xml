@@ -1,0 +1,23 @@
+<layout id="MainLayout">	
+    <label id="stopwatch" x="20" y="0" text="00:12:35" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="time" x="190" y="0" text="13:37" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_SMALL"/>    
+    <drawable id="squashLayout" />    
+    <label id="lblMatch" x="10" y="30" text="Match" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="lblSet" x="10" y="50" text="Set" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>    
+    <label id="lblSteps" x="110" y="30" text="Steps" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="lblPulse" x="110" y="50" text="Pulse" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>   
+    <label id="match" x="50" y="30" text="2" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="set" x="50" y="50" text="2/3" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>    
+    <label id="steps" x="160" y="30" text="2438" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="pulse" x="160" y="50" text="148" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="lblSetP1" x="30" y="80" text="Set" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="lblSetP2" x="135" y="80" text="Set" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="SetP1" x="70" y="80" text="1" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_SMALL"/>
+    <label id="SetP2" x="175" y="80" text="0" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_SMALL"/>    
+    <label id="ScoreP1" x="65" y="95" text="10" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_NUMBER_MILD"/>
+    <label id="ScoreP2" x="170" y="95" text="5" color="Gfx.COLOR_BLUE" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_NUMBER_MILD"/>
+    <label id="Serve" x="25" y="130" text="Serve" color="Gfx.COLOR_RED" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="TieBreak" x="75" y="130" text="" color="Gfx.COLOR_YELLOW" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
+    <label id="SideP1" x="13" y="110" text="L" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_MEDIUM"/>
+    <label id="SideP2" x="191" y="110" text="R" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_MEDIUM"/>
+</layout>

@@ -1,0 +1,6 @@
+<menu id="MainMenu">
+    <menu-item id="item_1">Neues Spiel</menu-item>
+    <menu-item id="item_2">Neuer Satz</menu-item>
+    <menu-item id="item_3">Historie</menu-item>
+    <menu-item id="item_4">Einstellungen</menu-item>
+</menu>

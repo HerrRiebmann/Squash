@@ -1,0 +1,4 @@
+<resources>
+    <string id="AppName">Squash</string>
+    <bitmap id="LauncherIcon" filename="images/Squash48.png" />    
+</resources>
