@@ -8,11 +8,11 @@ On the "Menu"-Button, you will find a setup to change the counting and the winni
 Also to endup a game inbetween.
 
 ###Images:
-![Game](https://forums.garmin.com/attachment.php?attachmentid=25690&d=1430223334)
+![Recording](/Screenshots/Squash 5.png?raw=true "Squash - Ingame")
 
-![Tie-Break](https://forums.garmin.com/attachment.php?attachmentid=25692&d=1430223366)
+![Tie-Break](/Screenshots/History2.png?raw=true "Squash - History")
 
-![History](https://forums.garmin.com/attachment.php?attachmentid=25691&d=1430223340)
+![History](/Screenshots/Squash 3.png?raw=true "Squash - Tie Break")
 
 
 ###Disclaimer
