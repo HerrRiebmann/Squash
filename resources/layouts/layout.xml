@@ -1,7 +1,7 @@
-<layout id="MainLayout">	
+<layout id="MainLayout">        
+    <drawable id="squashLayout" />
     <label id="stopwatch" x="20" y="0" text="00:12:35" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
     <label id="time" x="190" y="0" text="13:37" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_SMALL"/>    
-    <drawable id="squashLayout" />    
     <label id="lblMatch" x="10" y="30" text="Match" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
     <label id="lblSet" x="10" y="50" text="Set" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>    
     <label id="lblSteps" x="110" y="30" text="Steps" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_SMALL"/>
