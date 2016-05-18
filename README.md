@@ -25,3 +25,7 @@ This is only an optional feature to count your Steps during the match...
 Probably I will always abort the Activity at the end, because until now, there is no nice way to display your results in Connect (the Type Squash is unknown, off course).
 
 Feel free to use my (dirty) code :)
+
+###Compatibility
+After updating SDK from 1.1.2 to 1.2.8 everything was getting worse :(
+You have to remove a property from shapes and resize the Icon to make it work. Afterwards it looks awful and badly crashes if you start recording. Maybe I will investigate... Didn´t I want to stop developing in MonkeyC?!?
