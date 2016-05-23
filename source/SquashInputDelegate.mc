@@ -109,7 +109,7 @@ class SquashInputDelegate extends Ui.InputDelegate
         		}  		
 	        	var testString = Ui.loadResource(Rez.Strings.quit);			
 	        	var cd = new Ui.Confirmation( testString );
-	        	Ui.pushView( cd, new QuitDelegate(self), Ui.SLIDE_UP );	        	
+	        	Ui.pushView( cd, new QuitDelegate(self), Ui.SLIDE_UP );	        	        	
 	        	return true;	        	        	        	      	
         	}        	
     	}
@@ -134,7 +134,7 @@ class SquashInputDelegate extends Ui.InputDelegate
     		if(session == null)
     		{
     			//session = Record.createSession({:name=>"Squash", :sport=>Record.SPORT_TENNIS, :subSport=>Record.SUB_SPORT_MATCH});                
-				session = Record.createSession({:name=>"Squash", :sport=>Record.SPORT_TENNIS});
+				session = Record.createSession({:name=>"Squash", :sport=>Record.SPORT_TENNIS});				
     		}
             if(session.isRecording())
             {   
@@ -160,6 +160,7 @@ class SquashInputDelegate extends Ui.InputDelegate
     
     function QuitApp()
     {
+    	Sys.println("QuitApp-Progressbar");
     	var progressBar;
     	progressBar = new Ui.ProgressBar( "Save", null );
     	Ui.popView(Ui.SLIDE_IMMEDIATE);
@@ -175,26 +176,39 @@ class SquashInputDelegate extends Ui.InputDelegate
     	
 		progressBar.setDisplayString( "Activity" );
 		progressBar.setProgress( 50 );
+		Sys.println("Stored succesfully");
 		//Kill Quit Dialog
 		//Ui.popView(Ui.SLIDE_IMMEDIATE);
 		if(recorded)
 		{
+			_parent.storeRecording(true);
+			while(_parent.saveComplete == false)
+			{
+				progressBar.setProgress(null);
+			}
+			
+    		progressBar.setDisplayString(Ui.loadResource(Rez.Strings.successDlg) );
+ 			progressBar.setProgress(100);
+    	    Ui.popView(Ui.SLIDE_LEFT);
+			return true;
+			
 			Sys.println("Push Confirmation");
 			var testString = Ui.loadResource(Rez.Strings.save);			
 	    	var cd = new Ui.Confirmation( testString );
 	    	//Pop ProgressBar
-	    	Ui.popView(Ui.SLIDE_LEFT);	    	
-	    	Ui.pushView( cd, new ConfDelegate(_parent), Ui.SLIDE_RIGHT );
+	    	//Ui.popView(Ui.SLIDE_LEFT);	    	
+	    	Ui.pushView(cd, new ConfDelegate(_parent), Ui.SLIDE_RIGHT );
+	    	return true;
     	}
     	else
-    	{
+    	{    		
 	    	progressBar.setDisplayString( "Completed" );
-			progressBar.setProgress( 100 );
+	    	progressBar.setProgress( 100 );			
 			//Pop ProgressBar
-			Ui.popView(Ui.SLIDE_IMMEDIATE);			
+			Ui.popView(Ui.SLIDE_IMMEDIATE);
 		}	
-		
-		return true;	
+		//System.exit;
+		return false;	
     }
 }
 
@@ -207,11 +221,13 @@ class ConfDelegate extends Ui.ConfirmationDelegate
 	
 	function initialize(parent)
 	{		
+		Sys.println("ConfDelegateInitialized");	
         _parent = parent;        
     }
     
     function onResponse(value)
-    {    	
+    {    
+    	Sys.println(value);	
         if( value == CONFIRM_YES )
         {	
     		_parent.storeRecording(true);    		       	
@@ -221,23 +237,31 @@ class ConfDelegate extends Ui.ConfirmationDelegate
         	_parent.storeRecording(false);
         }
         
+        Sys.println("Confirmation Responded?!?");
         progressTimer = new Timer.Timer();
+                
+        //progressBar = new Ui.ProgressBar(Ui.loadResource(Rez.Strings.saveDlg), null );
         
-        progressBar = new Ui.ProgressBar(Ui.loadResource(Rez.Strings.saveDlg), null );
         //Pop Kill (Confirmation) View        
-        //Ui.popView(Ui.SLIDE_IMMEDIATE);                   		 
-       	Ui.pushView( progressBar, null, Ui.SLIDE_DOWN );
+        Ui.popView(Ui.SLIDE_IMMEDIATE); 
+                         		 
+       	//Ui.pushView( progressBar, null, Ui.SLIDE_DOWN );
+		Ui.switchToView(progressBar, null, Ui.SLIDE_DOWN );
+		
        	progressTimer.start( method(:timerCallback), 1000, true );
         
         //Pop Kill Parent View        
         //Ui.popView(Ui.SLIDE_IMMEDIATE);
         
         //Pop/kill one View
-        return false;		
+        return true;		
     }
     
     function timerCallback()
 	{
+		Sys.println("TimerCallback started");
+		progressBar = new Ui.ProgressBar(Ui.loadResource(Rez.Strings.saveDlg), null );
+		Ui.pushView( progressBar, null, Ui.SLIDE_DOWN );
     	if ( _parent.saveComplete == false )
     	{
     		Sys.println("Operation Not Complete");
@@ -281,14 +305,15 @@ class QuitDelegate extends Ui.ConfirmationDelegate
     {
         if( value == CONFIRM_YES )
         {     
-        	_parent.killed = true;   	
-        	_parent.QuitApp();	         	 
-    		if(!recorded)
-    		{
+        	_parent.killed = true;
+    		//if(!recorded)
+    		//{
     			Ui.popView(Ui.SLIDE_IMMEDIATE);    			
-    		}    		   		        	
+    		//}
+    		_parent.QuitApp();    		   		        	
         }      
         //Pop/kill one View		
-        return false;        
+        //return true;
+		return recorded;        
     }
 }
