@@ -20,12 +20,9 @@ One of my first App for my Garmin Vivoactive.
 There have been many issues between the Emulator and the real result on my watch.
 Some thing didn´t work as expected, so I stoped developing at some point.
 
-Everything works except storing the Activity during a correct quit-process.
-This is only an optional feature to count your Steps during the match...
-Probably I will always abort the Activity at the end, because until now, there is no nice way to display your results in Connect (the Type Squash is unknown, off course).
+But now, I was asked to share it, and I challanged myself to make it work :)
 
 Feel free to use my (dirty) code :)
 
 ###Compatibility
-After updating SDK from 1.1.2 to 1.2.8 everything was getting worse :(
-You have to remove a property from shapes and resize the Icon to make it work. Afterwards it looks awful and badly crashes if you start recording. Maybe I will investigate... Didn´t I want to stop developing in MonkeyC?!?
+Sucessfully updated to SDK 1.2.9 seems to work now!
