@@ -111,6 +111,19 @@ static class game
 					{
 						currentMatch.sets[i].scoreP1 -= 1;
 						currentMatch.sets[i].lastScoreP1 = false;
+						Sys.println(i);
+						if(i > 0)
+						{
+							if(currentMatch.sets[i-1].lastScoreP1)
+							{
+								ChangeServe("P1");
+							}
+							else
+							{
+								ChangeServe("P2");
+							}
+						}
+						ChangeSide();
 						return true;
 					}
 				}
@@ -120,9 +133,21 @@ static class game
 					{
 						currentMatch.sets[i].scoreP2 -=1;
 						currentMatch.sets[i].lastScoreP2 = false;
+						if(i > 0)
+						{
+							if(currentMatch.sets[i-1].lastScoreP1)
+							{
+								ChangeServe("P1");
+							}
+							else
+							{
+								ChangeServe("P2");
+							}
+						}
+						ChangeSide();						
 						return true;
 					}
-				}
+				}				
 			}
 		}
 		return false;
