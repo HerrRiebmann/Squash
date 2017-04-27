@@ -9,11 +9,11 @@ Also to endup a game inbetween.
 
 ### Images:
 
-![Recording](/Screenshots/Squash 5.png?raw=true "Squash - Ingame")
+![Recording](/Screenshots/Squash5.png?raw=true "Squash - Ingame")
 
 ![Tie-Break](/Screenshots/History2.png?raw=true "Squash - History")
 
-![History](/Screenshots/Squash 3.png?raw=true "Squash - Tie Break")
+![History](/Screenshots/Squash3.png?raw=true "Squash - Tie Break")
 
 
 ### Disclaimer
